@@ -230,3 +230,45 @@ header{
   align-items: center;
   margin-left: 305px;    
 }
+
+.subscribe-container{
+  margin-left: 93px;
+}
+
+.subscribe-input-elements{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-email{
+  color: var(--footer-subscribe-email-border);
+  height: 50px;
+  width: 358px;
+  background-color: var(--bg-main-color);
+  border: 1px solid var(--footer-subscribe-email-border);
+  border-radius: 4px;
+  padding: 15px 16px;
+  margin-right: 12px;
+}
+
+.subscribe-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--full-white);
+  background-color: var(--text-blue);  
+  border-radius: 4px;
+  border: none;  
+}
+
+.subscribe-button-icon{
+  fill: var(--full-white);
+  margin-left: 10px;
+}

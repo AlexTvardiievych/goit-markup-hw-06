@@ -293,7 +293,7 @@
   width: 528px;
   background-color: var(--full-white); 
   transform: translateX(-50%) translateY(-50%) scale(1); 
-  transition: transform var(--animation-duration) var(--animation-type);
+  transition: transform var(--animation-duration) var(--animation-type);  
 }
 
 .modal-button-close{
@@ -308,7 +308,21 @@
   border: 1px solid var(--button-border-color);
   border-radius: 50%;  
   height: 30px;
-  width: 30px;      
+  width: 30px; 
+  
+  transition-property: color cursor;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
+}
+
+.modal-button-close:hover,
+.modal-button-close:focus{
+  color: var(--text-blue);  
+  cursor: pointer;
+}
+
+.modal-button-close-icon{
+  fill: currentColor;
 }
 
 .backdrop.is-hidden .modal{
@@ -319,5 +333,194 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden; 
+}
+
+.information-for-recall-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  height: 581px;
+  width: 528px;
+  padding: 40px;
+}
+
+.information-for-recall-form .form-title{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--title-text);
+  margin-bottom: 12px;
+}
+
+.information-for-recall-form .form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.information-for-recall-form .input{
+  height: 40px;
+  font: inherit;
+  border: 1px solid var(--brordr-input-color);
+  border-radius: 4px;
+  padding: 11px 12px;
+  padding-left: 30px;
+  width: 100%;
+  transition-property: border-color cursor;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
+}
+
+.information-for-recall-form .input:focus{
+  border-color: var(--text-blue);  
+  outline: none;
+  cursor: pointer;
+}
+
+.information-for-recall-form .input:hover{
+  cursor: pointer; 
+}
+
+.information-for-recall-form .input-label{
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.information-for-recall-form .input-wrapper{
+  position: relative;
+  display: inherit;
+  width: inherit;
+  color: black;
+}
+
+.information-for-recall-form .input-wrapper-icon{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.information-for-recall-form .input:focus + .input-wrapper-icon{
+  fill: var(--text-blue);
+}
+
+.information-for-recall-form .textarea-group{
+  width: 100%;
+  height: 138px;
+  margin-bottom: 20px;
+}
+
+.information-for-recall-form .textarea{  
+  font: inherit;
+  border: 1px solid var(--brordr-input-color);
+  border-radius: 4px;
+  padding: 12px 16px;
+  height: 120px;  
+  width: 100%; 
+  transition-property: border-color cursor;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type); 
+}
+
+.information-for-recall-form .textarea:focus
+{
+  border-color: var(--text-blue);  
+  outline: none;
+  cursor: pointer;
+}
+
+.information-for-recall-form .textarea:hover{
+  cursor: pointer;
+}
+
+textarea:-moz-placeholder{ 
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--textarea-text); 
+}
+
+textarea::-webkit-input-placeholder{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--textarea-text);  
+}
+
+.information-for-recall-form .accept-policy-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.information-for-recall-form .checkbox-label{
+  display: flex;
+  width: 100%;
+}
+
+.information-for-recall-form .hidden-checkbox{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  appearance: none;
+}
+
+.information-for-recall-form .accept-policy-group-icon{
+  border: 2px solid var(--title-text);
+  border-radius: 2px;
+  margin-right: 6px;
+  transform: translateY(20%);
+}
+
+.information-for-recall-form .accept-policy-group .checkbox-sprite{
+  display: none;
+}
+
+.information-for-recall-form .hidden-checkbox:checked + .accept-policy-group-icon{
+  border: none;
+} 
+
+.information-for-recall-form .hidden-checkbox:checked + .accept-policy-group-icon .checkbox-sprite{
+  display: block;
+}
+
+.accept-policy-group .accept-policy-group-text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--subtitle-text);
+}
+
+.accept-policy-group .accept-policy-group-link{
+  color: var(--text-blue);
+  text-decoration: underline;
+}
+
+.information-for-recall-form .submit-button{
+  width: 200px;
+  height: 50px;
+  color: var(--full-white);
+  background-color: var(--text-blue);  
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-type);
+
+}
+
+.information-for-recall-form .submit-button:hover,
+.information-for-recall-form .submit-button:focus{
+  background-color: var(--form-button-active); 
 }
 
