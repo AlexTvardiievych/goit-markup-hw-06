@@ -415,7 +415,7 @@
   margin-bottom: 20px;
 }
 
-.information-for-recall-form .textarea{  
+.information-for-recall-form .input-textarea{  
   font: inherit;
   border: 1px solid var(--brordr-input-color);
   border-radius: 4px;
@@ -425,16 +425,17 @@
   transition-property: border-color cursor;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-type); 
+  resize: none;
 }
 
-.information-for-recall-form .textarea:focus
+.information-for-recall-form .input-textarea:focus
 {
   border-color: var(--text-blue);  
   outline: none;
   cursor: pointer;
 }
 
-.information-for-recall-form .textarea:hover{
+.information-for-recall-form .input-textarea:hover{
   cursor: pointer;
 }
 
